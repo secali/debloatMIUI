@@ -79,6 +79,7 @@ adb shell pm disable-user --user 0 com.mi.webkit.core
 adb shell pm disable-user --user 0 com.miui.daemon
 adb shell pm disable-user --user 0 com.miui.fm
 adb shell pm disable-user --user 0 com.miui.translation.kingsoft
+adb shell pm disable-user --user 0 com.xiaomi.finddevice
 adb shell pm disable-user --user 0 com.miui.backup
 
 
