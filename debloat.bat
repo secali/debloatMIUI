@@ -96,6 +96,7 @@ adb shell pm disable-user --user 0 com.android.internal.systemui.navbar.twobutto
 adb shell pm disable-user --user 0 com.android.systemui.gesture.line.overlay
 #----------------------------------------------------
 #APP FLUID GESTURE
+#YOU HAVE TO DOWNLOAD APK AND PUT ON SAME FOLDER THAN THIS SCRIPT TO INSTALL IT
 adb install fluid_gesture.apk
 #----------------------------------------------------
 
