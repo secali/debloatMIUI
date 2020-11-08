@@ -41,7 +41,10 @@ adb shell pm disable-user --user 0 com.xiaomi.glgm
 adb shell pm disable-user --user 0 com.google.android.gms.location.history
 adb shell pm disable-user --user 0 com.miui.cloudservice
 adb shell pm disable-user --user 0 com.miui.yellowpage
-adb shell pm disable-user --user 0 com.xiaomi.finddevice
+
+#IS NOT RECOMMENDED TO REMOVE IT
+#adb shell pm disable-user --user 0 com.xiaomi.finddevice
+
 adb shell pm disable-user --user 0 com.bsp.catchlog
 adb shell pm disable-user --user 0 com.miui.touchassistant
 adb shell pm disable-user --user 0 com.miui.bugreport
@@ -66,11 +69,39 @@ adb shell pm disable-user --user 0 com.miui.nextpay
 adb shell pm disable-user --user 0 com.miui.newmidrive
 adb shell pm disable-user --user 0 com.miui.accessibility
 adb shell pm disable-user --user 0 com.miui.personalassistant
+adb shell pm disable-user --user 0 com.google.android.apps.tachyon
+adb shell pm disable-user --user 0 com.google.android.videos
+adb shell pm disable-user --user 0 com.google.android.music
+adb shell pm disable-user --user 0 com.google.android.feedback
+adb shell pm disable-user --user 0 com.miui.phrase
+adb shell pm disable-user --user 0 com.miui.audiomonitor
+adb shell pm disable-user --user 0 com.miui.hybrid
 
 
+#REMOVE GALLERY (YOU CAN USE PHOTOS) AND APP STORE FROM XIAOMI
 adb shell pm uninstall --user 0 com.miui.gallery
 adb shell pm uninstall --user 0 com.xiaomi.mipicks
 
-#adb shell cmd package bg-dexopt-job
+
+echo IF YOU DO NOT WANT TO REPLACE SYSTEM GESTURE BY FLUID GESTURE, CLOSE THE SCRIPT
+
+PAUSE
+#GESTURES WILL BE REPLACED BY FLUID GESTURE APK
+adb shell pm disable-user --user 0 com.google.android.printservice.recommendation
+adb shell pm disable-user --user 0 com.android.internal.systemui.navbar.gestural
+adb shell pm disable-user --user 0 com.android.internal.systemui.navbar.gestural_narrow_back
+adb shell pm disable-user --user 0 com.android.internal.systemui.navbar.gestural_extra_wide_back
+adb shell pm disable-user --user 0 com.android.internal.systemui.navbar.gestural_wide_back
+adb shell pm disable-user --user 0 com.android.internal.systemui.navbar.twobutton
+adb shell pm disable-user --user 0 com.android.systemui.gesture.line.overlay
+#----------------------------------------------------
+#APP FLUID GESTURE
+adb install fluid_gesture.apk
+#----------------------------------------------------
+
+
+#FORCE DEODEX, SOMETIMES USEFUL FOR BATTERY STUFF
+echo WAIT ARROUND 5-10 MIN
+adb shell cmd package bg-dexopt-job
 
 pause
