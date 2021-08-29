@@ -83,26 +83,4 @@ adb shell pm uninstall --user 0 com.miui.gallery
 adb shell pm uninstall --user 0 com.xiaomi.mipicks
 
 
-echo IF YOU DO NOT WANT TO REPLACE SYSTEM GESTURE BY FLUID GESTURE, CLOSE THE SCRIPT
-
-PAUSE
-#GESTURES WILL BE REPLACED BY FLUID GESTURE APK
-adb shell pm disable-user --user 0 com.google.android.printservice.recommendation
-adb shell pm disable-user --user 0 com.android.internal.systemui.navbar.gestural
-adb shell pm disable-user --user 0 com.android.internal.systemui.navbar.gestural_narrow_back
-adb shell pm disable-user --user 0 com.android.internal.systemui.navbar.gestural_extra_wide_back
-adb shell pm disable-user --user 0 com.android.internal.systemui.navbar.gestural_wide_back
-adb shell pm disable-user --user 0 com.android.internal.systemui.navbar.twobutton
-adb shell pm disable-user --user 0 com.android.systemui.gesture.line.overlay
-#----------------------------------------------------
-#APP FLUID GESTURE
-#YOU HAVE TO DOWNLOAD APK AND PUT ON SAME FOLDER THAN THIS SCRIPT TO INSTALL IT
-adb install fluid_gesture.apk
-#----------------------------------------------------
-
-
-#FORCE DEODEX, SOMETIMES USEFUL FOR BATTERY STUFF
-echo WAIT ARROUND 5-10 MIN
-adb shell cmd package bg-dexopt-job
-
 pause
