@@ -1,10 +1,9 @@
 # debloatMIUI
-With this script you can debloat MIUI12
+Con este script puedes deblotear MIUI11 o MIUI12:
 
-Only removed apps:
+Solo las siguientes apps serán removidas:
 - MIUI Gallery.
 - Xiaomi App Store.
 
-All other apps are only disabled and you can enable in settings.
+El resto simplemente serán deshabilitadas, si desea habilitar todas las aplicaciones nuevamente, reemplace todas las "disable-user" por "enable" y ejecute el script nuevamente.
 
-Last command is for re-compile all apps by dex2oat, so you need to wait depending of number of apps you have, between 2-40 min, you can continue using your phone, if you decide to desconect usb, the process will stop without damage.
